@@ -1,0 +1,18 @@
+1 - Select
+2 - L3
+3 - R3
+4 - Start
+5 - D-Pad Up
+6 - D-Pad Right
+7 - D-Pad Down
+8 - D-Pad Left
+9 - L2
+10 - R2
+11 - L1
+12 - R1
+13 - Triangle
+14 - Circle
+15 - X
+16 - Square
+
+http://wiki.xbmc.org/index.php?title=keymap#Sony_PlayStation_3_Sixaxis_Controller_Section

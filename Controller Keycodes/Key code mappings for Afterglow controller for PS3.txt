@@ -1,0 +1,24 @@
+Info from xbmc.log:
+21:11:21 T:3456  NOTICE: CJoystick::EnumJoysticksCallback : Enabled Joystick: Afterglow controller for PS3
+21:11:21 T:3456  NOTICE: CJoystick::EnumJoysticksCallback : Total Axis: 4 Total Hats: 1 Total Buttons: 13
+
+
+<!--   Hat 1 <position> = D-pad <position>      -->
+
+<!--   ID - Button on Controller -->
+<!--   1  - Square       -->
+<!--   2  - X            -->
+<!--   3  - Circle       -->
+<!--   4  - Triangle     -->
+<!--   5  - L1     -->
+<!--   6  - R1  -->
+<!--   7  - L2   -->
+<!--   8  - R2   -->
+<!--   9  - Select       -->
+<!--   10 - Start        -->
+<!--   11 - Left Thumbstick      -->
+<!--   12 - Right Thumbstick     -->
+<!--   13 - PS button    -->
+
+
+Dunno axis, but there are 4, prolly 1 & 2, with +1 and -1
