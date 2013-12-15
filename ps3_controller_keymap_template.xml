@@ -1,5 +1,7 @@
 <!--
-Controller keymap template by RT Wolf. Created Dec 11, 2013 out of frustration.
+PS3 Controller Keymap Template by RT Wolf.
+Version 1.2
+Created Dec 11, 2013 out of frustration.
 Idea is to help you create your own controller mapping easily to match the PS3's.
  -->
 
@@ -20,10 +22,10 @@ and then running the same search and replace through on the altered version.
 Feel free to share your altered version.
  -->
 
-<!-- Joystick Name: #joystick_name# -->
+<!-- A) Joystick Name: #joystick_name# -->
 
 <!-- 
-Button Mappings in Windows:
+B) Button Mappings in Windows:
 
 ID                Button
 
@@ -43,14 +45,13 @@ ID                Button
  -->
 
 <!-- 
+C) D-Pad
 D-Pad is either mapped as buttons with numbers, or a "hat" with an id & directions
 The line after the controller name in the xbmc.log will tell you if there's a hat.
  E.g.
 21:11:21 T:3456  NOTICE: CJoystick::EnumJoysticksCallback : Enabled Joystick: Afterglow controller for PS3
 21:11:21 T:3456  NOTICE: CJoystick::EnumJoysticksCallback : Total Axis: 4 Total Hats: 1 Total Buttons: 13
- -->
 
-<!-- 
 Instructions: 1. If it's a button, then you need to replace the ### with the number in the button section OR
 if it is a hat then you need to replace the ### under the hat section (most likely "1")
 2. Copy everything inside the [] and replace each instance of the text within the two #.
@@ -71,10 +72,8 @@ Axis Mappings:
 ID              Button
 1               Left Stick L/R
 2               Left Stick U/D
-3 limit +1      Left Trigger
-3 limit -1      Right Trigger
-4               Right Stick L/R
-5               Right Stick U/D
+3               Right Stick L/R
+4               Right Stick U/D
  -->
 
 <!-- 
