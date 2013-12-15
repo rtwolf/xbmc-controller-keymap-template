@@ -2,6 +2,8 @@
 # Automatically generate a controller map to help with testing.
 # RT Wolf. Dec 15, 2013
 # https://github.com/rtwolf/xbmc-controller-keymap-template
+# If you're on windows, check out cygwin automated install to run this file (run "cyg-get python" to get python):
+# https://github.com/rtwolf/cygwin-auto-install
 
 import os
 
