@@ -58,12 +58,12 @@ if it is a hat then you need to replace the ### under the hat section (most like
  -->
 
 <!--  
-Text to replace           Button Mappings            Hat Mappings
-#d-pad_up#                [ button id="###" ]        [ hat id="###" position="up" ]
-#d-pad_down#              [ button id="###" ]        [ hat id="###" position="down" ]
-#d-pad_left#              [ button id="###" ]        [ hat id="###" position="left" ]
-#d-pad_right#             [ button id="###" ]        [ hat id="###" position="right" ]
-#d-pad_closing_tag#       [ button ]                 [ hat ]
+Text to replace           Button Mappings        Hat Mappings
+#d-pad_up#                button id="###"        hat id="###" position="up"
+#d-pad_down#              button id="###"        hat id="###" position="down"
+#d-pad_left#              button id="###"        hat id="###" position="left"
+#d-pad_right#             button id="###"        hat id="###" position="right"
+#d-pad_closing_tag#       button                 hat
  -->
 
 <!-- 
@@ -142,14 +142,12 @@ http://wiki.xbmc.org/index.php?title=keymap
 
   <MyFiles>
     <joystick name="#joystick_name#">
-      <button id="#L1#">PreviousMenu</button>
       <button id="#R1#">Highlight</button>
     </joystick>
   </MyFiles>
 
   <MyMusicPlaylist>
     <joystick name="#joystick_name#">
-      <button id="#L1#">PreviousMenu</button>
       <button id="#R1#">Delete</button>
       <button id="#circle#">Playlist</button>      <!-- Close playlist -->
     </joystick>
@@ -157,36 +155,15 @@ http://wiki.xbmc.org/index.php?title=keymap
 
   <MyMusicPlaylistEditor>
     <joystick name="#joystick_name#">
-      <button id="#circle#">PreviousMenu</button>
       <button id="#R1#">Queue</button>
     </joystick>
   </MyMusicPlaylistEditor>
 
   <MyMusicFiles>
     <joystick name="#joystick_name#">
-      <button id="#L1#">PreviousMenu</button>
       <button id="#R1#">Queue</button>
     </joystick>
   </MyMusicFiles>
-
-  <MyPictures>
-    <joystick name="#joystick_name#">
-      <button id="#L1#">PreviousMenu</button>
-    </joystick>
-  </MyPictures>
-
-  <MyPrograms>
-    <joystick name="#joystick_name#">
-      <button id="#L1#">PreviousMenu</button>
-    </joystick>
-  </MyPrograms>
-
-  <MyMusicLibrary>
-    <joystick name="#joystick_name#">
-      <button id="#L1#">PreviousMenu</button>
-      <button id="#triangle#">ContextMenu</button>
-    </joystick>
-  </MyMusicLibrary>
 
   <FullscreenVideo>
     <joystick name="#joystick_name#">
@@ -480,14 +457,12 @@ http://wiki.xbmc.org/index.php?title=keymap
   <LockSettings>
     <joystick name="#joystick_name#">
       <button id="#L1#">Close</button>
-      <!-- <button id="#circle#">PreviousMenu</button> -->
     </joystick>
   </LockSettings>
 
   <ProfileSettings>
     <joystick name="#joystick_name#">
       <button id="#start#">Close</button>
-      <!-- <button id="#circle#">PreviousMenu</button> -->
     </joystick>
   </ProfileSettings>
 
@@ -499,91 +474,5 @@ http://wiki.xbmc.org/index.php?title=keymap
       <button id="#select#">Close</button>
     </joystick>
   </PictureInfo>
-
-<!-- Made redundant by adding Circle = Back to Global
-  <Weather>
-    <joystick name="#joystick_name#">
-      <button id="#circle#">PreviousMenu</button>
-    </joystick>
-  </Weather>
-
-  <Settings>
-    <joystick name="#joystick_name#">
-      <button id="#circle#">PreviousMenu</button>
-    </joystick>
-  </Settings>
-
-  <MyPicturesSettings>
-    <joystick name="#joystick_name#">
-      <button id="#circle#">PreviousMenu</button>
-    </joystick>
-  </MyPicturesSettings>
-
-  <MyProgramsSettings>
-    <joystick name="#joystick_name#">
-      <button id="#circle#">PreviousMenu</button>
-    </joystick>
-  </MyProgramsSettings>
-
-  <MyWeatherSettings>
-    <joystick name="#joystick_name#">
-      <button id="#circle#">PreviousMenu</button>
-    </joystick>
-  </MyWeatherSettings>
-
-  <MyMusicSettings>
-    <joystick name="#joystick_name#">
-      <button id="#circle#">PreviousMenu</button>
-    </joystick>
-  </MyMusicSettings>
-
-  <SystemSettings>
-    <joystick name="#joystick_name#">
-      <button id="#circle#">PreviousMenu</button>
-    </joystick>
-  </SystemSettings>
-
-  <MyVideosSettings>
-    <joystick name="#joystick_name#">
-      <button id="#circle#">PreviousMenu</button>
-    </joystick>
-  </MyVideosSettings>
-
-  <NetworkSettings>
-    <joystick name="#joystick_name#">
-      <button id="#circle#">PreviousMenu</button>
-    </joystick>
-  </NetworkSettings>
-
-  <AppearanceSettings>
-    <joystick name="#joystick_name#">
-      <button id="#circle#">PreviousMenu</button>
-    </joystick>
-  </AppearanceSettings>
-
-  <Profiles>
-    <joystick name="#joystick_name#">
-      <button id="#circle#">PreviousMenu</button>
-    </joystick>
-  </Profiles>
-
-  <systeminfo>
-    <joystick name="#joystick_name#">
-      <button id="#circle#">PreviousMenu</button>
-    </joystick>
-  </systeminfo>
-
-  <shutdownmenu>
-    <joystick name="#joystick_name#">
-      <button id="#circle#">PreviousMenu</button>
-    </joystick>
-  </shutdownmenu>
-
-  <submenu>
-    <joystick name="#joystick_name#">
-      <button id="#circle#">PreviousMenu</button>
-    </joystick>
-  </submenu>
- -->
 
 </keymap>
