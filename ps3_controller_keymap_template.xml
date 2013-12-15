@@ -59,16 +59,16 @@ if it is a hat then you need to replace the ### under the hat section (most like
  -->
 
 <!--  
-Text to replace           Button Mappings        Hat Mappings
-#d-pad_up#                button id="###"        hat id="###" position="up"
-#d-pad_down#              button id="###"        hat id="###" position="down"
-#d-pad_left#              button id="###"        hat id="###" position="left"
-#d-pad_right#             button id="###"        hat id="###" position="right"
-#d-pad_closing_tag#       button                 hat
+Text to replace           Button Mappings            Hat Mappings
+#d-pad_up#                [ button id="###" ]        [ hat id="###" position="up" ]
+#d-pad_down#              [ button id="###" ]        [ hat id="###" position="down" ]
+#d-pad_left#              [ button id="###" ]        [ hat id="###" position="left" ]
+#d-pad_right#             [ button id="###" ]        [ hat id="###" position="right" ]
+#d-pad_closing_tag#       [ button ]                 [ hat ]
  -->
 
 <!-- 
-Axis Mappings:
+Axis (thumbstick) Mappings:
 ID              Button
 1               Left Stick L/R
 2               Left Stick U/D
