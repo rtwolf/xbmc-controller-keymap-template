@@ -16,3 +16,5 @@ If you've found this project helpful, please support me by buying me a coffee: h
 
 
 As you may know, "A programmer is just a tool which converts caffeine into code". Thanks in advance!
+
+Also, I'm clearly standing on the shoulders of giants. Please support the XBMC project directly: http://xbmc.org/contribute/
