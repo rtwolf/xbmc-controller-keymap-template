@@ -16,3 +16,5 @@
 16 - Square
 
 http://wiki.xbmc.org/index.php?title=keymap#Sony_PlayStation_3_Sixaxis_Controller_Section
+
+Source for this file: https://github.com/rtwolf/xbmc-controller-keymap-template

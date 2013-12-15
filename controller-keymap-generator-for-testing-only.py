@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # Automatically generate a controller map to help with testing.
 # RT Wolf. Dec 15, 2013
+# https://github.com/rtwolf/xbmc-controller-keymap-template
 
 import os
 

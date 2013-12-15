@@ -1,3 +1,5 @@
+https://github.com/rtwolf/xbmc-controller-keymap-template
+
 Info from xbmc.log:
 21:11:21 T:3456  NOTICE: CJoystick::EnumJoysticksCallback : Enabled Joystick: Afterglow controller for PS3
 21:11:21 T:3456  NOTICE: CJoystick::EnumJoysticksCallback : Total Axis: 4 Total Hats: 1 Total Buttons: 13
