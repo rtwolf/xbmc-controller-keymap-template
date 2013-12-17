@@ -118,8 +118,8 @@ http://wiki.xbmc.org/index.php?title=keymap
 
       <!-- Right stick click activates the shutdown menu. -->
       <button id="#R3#">XBMC.ActivateWindow(ShutdownMenu)</button>
-      <!-- Left stick click activates player controls. -->
-      <button id="#L3#">XBMC.ActivateWindow(PlayerControls)</button>
+      <!-- Left stick click activates favourites menu. -->
+      <button id="#L3#">XBMC.ActivateWindow(favourites)</button>
       
 
       <!-- Push up on the right stick for volume up. Push down for volume down. -->
