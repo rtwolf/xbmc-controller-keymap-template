@@ -4,9 +4,9 @@ Version 1.2
 Created Dec 11, 2013 out of frustration.
 Idea is to help you create your own controller mapping easily to match the PS3's.
 https://github.com/rtwolf/xbmc-controller-keymap-template
- -->
 
-<!-- 
+
+Instructions:
 1. Turn on debugging in XBMC and press the keys, remembering which order you pressed them in
 2. While consulting xbmc.log, do a search & replace all (Ctrl+h in most windows app including Notepad)
 for the "variable" in between the #s with A) the name of your controller, B) the key codes & C) the d-pad mappings.
@@ -15,37 +15,33 @@ E.g. Search for "#X#" and replace with "1".
 4. Name file after controller & drop into keymap folder and enjoy!
 5. Check the xbmc.log for errors by searching for the filename of the keymap and checking the line after
 6. If it works, please upload and share on the forums!
- -->
 
-<!--
 To make your own custom version, I suggest altering a "blank" copy of the template
 and then running the same search and replace through on the altered version.
 Feel free to share your altered version.
- -->
+ 
 
-<!-- A) Joystick Name: #joystick_name# -->
+A) Joystick Name: #joystick_name#
 
-<!-- 
+
 B) Button Mappings in Windows:
 
-ID                Button
+ID                Button                                     Button numbers from xbmc.log
+#X#               X (Select/Click)                           
+#circle#          Cricle (Back or cancel)                    
+#square#          Square                                     
+#triangle#        Triangle (Context menu/right click)        
+#L1#              L1                                         
+#R1#              R1                                         
+#L2#              L2                                         
+#R2#              R2                                          
+#select#          Select                                      
+#start#           Start                                       
+#ps_button#       PS button                                   
+#L3#              Left Stick Button                          
+#R3#              Right Stick Button                         
+ 
 
-#X#               X (Select/Click)
-#circle#          Cricle (Back or cancel)
-#square#          Square
-#triangle#        Triangle (Context menu/right click)
-#L1#              L1
-#R1#              R1
-#L2#              L2
-#R2#              R2
-#select#          Select
-#start#           Start
-#ps_button#       PS button
-#L3#              Left Stick Button
-#R3#              Right Stick Button
- -->
-
-<!-- 
 C) D-Pad
 D-Pad is either mapped as buttons with numbers, or a "hat" with an id & directions
 The line after the controller name in the xbmc.log will tell you if there's a hat.
@@ -53,31 +49,29 @@ The line after the controller name in the xbmc.log will tell you if there's a ha
 21:11:21 T:3456  NOTICE: CJoystick::EnumJoysticksCallback : Enabled Joystick: Afterglow controller for PS3
 21:11:21 T:3456  NOTICE: CJoystick::EnumJoysticksCallback : Total Axis: 4 Total Hats: 1 Total Buttons: 13
 
-Instructions: 1. If it's a button, then you need to replace the ### with the number in the button section OR
+Instructions:
+1. If it's a button, then you need to replace the ### with the number in the button section OR
 if it is a hat then you need to replace the ### under the hat section (most likely "1")
 2. Copy everything inside the [] and replace each instance of the text within the two #.
 3. replace all instances of #d-pad_closing_tag# with either "button" or "hat" depending on which you had.
- -->
 
-<!--  
+
 Text to replace           Button Mappings            Hat Mappings
 #d-pad_up#                [ button id="###" ]        [ hat id="###" position="up" ]
 #d-pad_down#              [ button id="###" ]        [ hat id="###" position="down" ]
 #d-pad_left#              [ button id="###" ]        [ hat id="###" position="left" ]
 #d-pad_right#             [ button id="###" ]        [ hat id="###" position="right" ]
 #d-pad_closing_tag#       [ button ]                 [ hat ]
- -->
 
-<!-- 
-Axis (thumbstick) Mappings:
+
+Axis (thumbstick) Mappings - default:
 ID              Button
 1               Left Stick L/R
 2               Left Stick U/D
 3               Right Stick L/R
 4               Right Stick U/D
- -->
 
-<!-- 
+
 Acknowledgements & References
 http://forum.xbmc.org/showthread.php?tid=135871
 http://forum.xbmc.org/showthread.php?tid=66619
