@@ -1,51 +1,46 @@
 <!--
-PS3 Controller Keymap Template by RT Wolf.
-Version 1.2
-Created Dec 11, 2013 out of frustration.
-Idea is to help you create your own controller mapping easily to match the PS3's.
+OXBOX Controller Keymap Template by RT Wolf.
+Version 1.0
+Created Jan 17, 2014 out of frustration.
+Idea is to help you create your own controller mapping easily to match the PS3's (in this case).
 https://github.com/rtwolf/xbmc-controller-keymap-template
- -->
 
-<!-- 
-1. Turn on debugging in XBMC and press the keys, remembering which order you pressed them in
+Instructions:
+1. Turn on debugging in XBMC and press the keys, remembering which order you pressed them in.
 2. While consulting xbmc.log, do a search & replace all (Ctrl+h in most windows app including Notepad)
 for the "variable" in between the #s with A) the name of your controller, B) the key codes & C) the d-pad mappings.
-E.g. Search for "#X#" and replace with "1".
+E.g. Search for "#A#" and replace with "1".
 3. Do a search in the file for "#" to find any that didn't get changed.
 4. Name file after controller & drop into keymap folder and enjoy!
 5. Check the xbmc.log for errors by searching for the filename of the keymap and checking the line after
 6. If it works, please upload and share on the forums!
- -->
 
-<!--
 To make your own custom version, I suggest altering a "blank" copy of the template
 and then running the same search and replace through on the altered version.
 Feel free to share your altered version.
- -->
 
-<!-- A) Joystick Name: #joystick_name# -->
 
-<!-- 
+------------------ Editing Starts here -------------------------
+
+A) Joystick Name from xbmc.log: #joystick_name#
+
+
 B) Button Mappings in Windows:
+ID                Button                                  Button number from xbmc.log
+#A#               A (Select/Click)                        
+#B#               B (Back or cancel)                      
+#X#               X                                       
+#Y#               Y (Context menu/right click)            
+#WHITE#           White Button                            
+#BLACK#           Black Button                            
+#L1#              L1                                      
+#R1#              R1                                      
+#BACK#            Back                                    
+#START#           Start                                   
+#L3#              Left Stick Button                       
+#R3#              Right Stick Button                      
 
-ID                Button
 
-#X#               X (Select/Click)
-#circle#          Cricle (Back or cancel)
-#square#          Square
-#triangle#        Triangle (Context menu/right click)
-#L1#              L1
-#R1#              R1
-#L2#              L2
-#R2#              R2
-#select#          Select
-#start#           Start
-#ps_button#       PS button
-#L3#              Left Stick Button
-#R3#              Right Stick Button
- -->
-
-<!-- 
 C) D-Pad
 D-Pad is either mapped as buttons with numbers, or a "hat" with an id & directions
 The line after the controller name in the xbmc.log will tell you if there's a hat.
@@ -53,43 +48,41 @@ The line after the controller name in the xbmc.log will tell you if there's a ha
 21:11:21 T:3456  NOTICE: CJoystick::EnumJoysticksCallback : Enabled Joystick: Afterglow controller for PS3
 21:11:21 T:3456  NOTICE: CJoystick::EnumJoysticksCallback : Total Axis: 4 Total Hats: 1 Total Buttons: 13
 
-Instructions: 1. If it's a button, then you need to replace the ### with the number in the button section OR
+D-Pad Instructions:
+1. If it's a button, then you need to replace the ### with the number in the button section OR
 if it is a hat then you need to replace the ### under the hat section (most likely "1")
 2. Copy everything inside the [] and replace each instance of the text within the two #.
 3. replace all instances of #d-pad_closing_tag# with either "button" or "hat" depending on which you had.
- -->
 
-<!--  
+
 Text to replace           Button Mappings            Hat Mappings
 #d-pad_up#                [ button id="###" ]        [ hat id="###" position="up" ]
 #d-pad_down#              [ button id="###" ]        [ hat id="###" position="down" ]
 #d-pad_left#              [ button id="###" ]        [ hat id="###" position="left" ]
 #d-pad_right#             [ button id="###" ]        [ hat id="###" position="right" ]
 #d-pad_closing_tag#       [ button ]                 [ hat ]
- -->
 
-<!-- 
+
 Axis (thumbstick) Mappings:
 ID              Button
 1               Left Stick L/R
 2               Left Stick U/D
 3               Right Stick L/R
 4               Right Stick U/D
- -->
 
-<!-- 
+
 Acknowledgements & References
 http://forum.xbmc.org/showthread.php?tid=135871
 http://forum.xbmc.org/showthread.php?tid=66619
 http://wiki.xbmc.org/index.php?title=keymap
- -->
+-->
 
 
 <!--   ------------------------KEYMAP BEGINS HERE---------------------- -->
 
 <keymap>
 
-  <!-- Everything in the global tag is the default used if its not superceded
+  <!-- Everything in the global tag is the default used if its not superseded
       in the specific windows in their own tags below. -->
   <global>
     <joystick name="#joystick_name#">
@@ -100,21 +93,20 @@ http://wiki.xbmc.org/index.php?title=keymap
       <#d-pad_right#>Right</#d-pad_closing_tag#>
 
       <!-- L2 & R2 Page Up & Down respectively -->
-      <button id="#L2#">PageUp</button>
-      <button id="#R2#">PageDown</button>
+      <button id="#WHITE#">PageUp</button>
+      <button id="#BLACK#">PageDown</button>
 
       <!-- X selects. Circle goes back. Triangle gets context menu. Square goes fullscreen and back. -->
-      <button id="#X#">Select</button>
-      <button id="#circle#">Back</button>
-      <button id="#triangle#">ContextMenu</button>
-      <button id="#square#">FullScreen</button>
-      <button id="#select#">Info</button>
+      <button id="#A#">Select</button>
+      <button id="#B#">Back</button>
+      <button id="#Y#">ContextMenu</button>
+      <button id="#X#">FullScreen</button>
+      <button id="#BACK#">Info</button>
 
       <!--Left Shoulder Queues videos. Right shoulder displays the current queue. -->
       <button id="#L1#">Queue</button>
       <button id="#R1#">Playlist</button>
-      <button id="#circle#">Back</button> <!-- used to be PreviousMenu -->
-      <button id="#ps_button#">XBMC.ActivateWindow(Home)</button>
+      <button id="#B#">Back</button> <!-- used to be PreviousMenu -->
 
       <!-- Right stick click activates the shutdown menu. -->
       <button id="#R3#">XBMC.ActivateWindow(ShutdownMenu)</button>
@@ -149,7 +141,7 @@ http://wiki.xbmc.org/index.php?title=keymap
   <MyMusicPlaylist>
     <joystick name="#joystick_name#">
       <button id="#R1#">Delete</button>
-      <button id="#circle#">Playlist</button>      <!-- Close playlist -->
+      <button id="#B#">Playlist</button>      <!-- Close playlist -->
     </joystick>
   </MyMusicPlaylist>
 
@@ -167,19 +159,19 @@ http://wiki.xbmc.org/index.php?title=keymap
 
   <FullscreenVideo>
     <joystick name="#joystick_name#">
-      <button id="#X#">Pause</button>
-      <button id="#circle#">Stop</button>
-      <button id="#square#">AspectRatio</button>
+      <button id="#A#">Pause</button>
+      <button id="#B#">Stop</button>
+      <button id="#X#">AspectRatio</button>
       <button id="#R1#">CodecInfo</button>
-      <button id="#select#">Info</button>
+      <button id="#BACK#">Info</button>
       <button id="#L1#">SmallStepBack</button>
-      <button id="#triangle#">OSD</button>
+      <button id="#Y#">OSD</button>
       <#d-pad_left#>StepBack</#d-pad_closing_tag#>
       <#d-pad_right#>StepForward</#d-pad_closing_tag#>
       <#d-pad_up#>BigStepForward</#d-pad_closing_tag#>
       <#d-pad_down#>BigStepBack</#d-pad_closing_tag#>
-      <button id="#L2#">Rewind</button>
-      <button id="#R2#">FastForward</button>
+      <button id="#WHITE#">Rewind</button>
+      <button id="#BLACK#">FastForward</button>
       <axis limit="+1" id="1">AnalogFastForward</axis>
       <axis limit="-1" id="1">AnalogRewind</axis>
     </joystick>
@@ -187,12 +179,12 @@ http://wiki.xbmc.org/index.php?title=keymap
 
   <FullscreenInfo>
     <joystick name="#joystick_name#">
-      <button id="#triangle#">OSD</button>
+      <button id="#Y#">OSD</button>
       <button id="#R1#">CodecInfo</button>
-      <button id="#select#">Close</button>
-      <button id="#circle#">Close</button>
-      <button id="#L2#">Rewind</button>
-      <button id="#R2#">FastForward</button>
+      <button id="#BACK#">Close</button>
+      <button id="#B#">Close</button>
+      <button id="#WHITE#">Rewind</button>
+      <button id="#BLACK#">FastForward</button>
       <axis limit="+1" id="1">AnalogFastForward</axis>
       <axis limit="-1" id="1">AnalogRewind</axis>
     </joystick>
@@ -200,22 +192,22 @@ http://wiki.xbmc.org/index.php?title=keymap
 
   <PlayerControls>
     <joystick name="#joystick_name#">
-      <button id="#circle#">Close</button>
-      <button id="#start#">Close</button>
+      <button id="#B#">Close</button>
+      <button id="#START#">Close</button>
     </joystick>
   </PlayerControls>
 
   <Visualisation>
     <joystick name="#joystick_name#">
-      <button id="#X#">Pause</button>
-      <button id="#circle#">Stop</button>
-      <button id="#square#">XBMC.ActivateWindow(VisualisationPresetList)</button>
+      <button id="#A#">Pause</button>
+      <button id="#B#">Stop</button>
+      <button id="#X#">XBMC.ActivateWindow(VisualisationPresetList)</button>
       <button id="#R1#">CodecInfo</button>
-      <button id="#select#">Info</button>
-      <button id="#triangle#">XBMC.ActivateWindow(MusicOSD)</button>
+      <button id="#BACK#">Info</button>
+      <button id="#Y#">XBMC.ActivateWindow(MusicOSD)</button>
       <button id="#L1#">LockPreset</button>
-      <button id="#L2#">Rewind</button>
-      <button id="#R2#">FastForward</button>
+      <button id="#WHITE#">Rewind</button>
+      <button id="#BLACK#">FastForward</button>
       <axis limit="+1" id="1">AnalogFastForward</axis>
       <axis limit="-1" id="1">AnalogRewind</axis>
       <#d-pad_left#>SkipPrevious</#d-pad_closing_tag#>
@@ -227,22 +219,22 @@ http://wiki.xbmc.org/index.php?title=keymap
 
   <MusicOSD>
     <joystick name="#joystick_name#">
-      <button id="#triangle#">Close</button>
-      <button id="#circle#">Close</button>
+      <button id="#Y#">Close</button>
+      <button id="#B#">Close</button>
       <button id="#R1#">CodecInfo</button>
-      <button id="#select#">Info</button>
-      <button id="#L2#">AnalogRewind</button>
-      <button id="#R2#">AnalogFastForward</button>
+      <button id="#BACK#">Info</button>
+      <button id="#WHITE#">AnalogRewind</button>
+      <button id="#BLACK#">AnalogFastForward</button>
     </joystick>
   </MusicOSD>
 
   <VisualisationSettings>
     <joystick name="#joystick_name#">
-      <button id="#circle#">Close</button>
-      <button id="#select#">Close</button>
-      <button id="#start#">Close</button>
-      <button id="#R2#">FastForward</button>
-      <button id="#L2#">Rewind</button>
+      <button id="#B#">Close</button>
+      <button id="#BACK#">Close</button>
+      <button id="#START#">Close</button>
+      <button id="#BLACK#">FastForward</button>
+      <button id="#WHITE#">Rewind</button>
       <axis limit="+1" id="1">AnalogFastForward</axis>
       <axis limit="-1" id="1">AnalogRewind</axis>
     </joystick>
@@ -250,12 +242,12 @@ http://wiki.xbmc.org/index.php?title=keymap
 
   <VisualisationPresetList>
     <joystick name="#joystick_name#">
-      <button id="#circle#">Close</button>
+      <button id="#B#">Close</button>
       <button id="#L1#">Close</button>
-      <button id="#start#">Close</button>
-      <button id="#triangle#">Close</button>
-      <button id="#L2#">AnalogRewind</button>
-      <button id="#R2#">AnalogFastForward</button>
+      <button id="#START#">Close</button>
+      <button id="#Y#">Close</button>
+      <button id="#WHITE#">AnalogRewind</button>
+      <button id="#BLACK#">AnalogFastForward</button>
     </joystick>
   </VisualisationPresetList>
 
@@ -265,20 +257,20 @@ http://wiki.xbmc.org/index.php?title=keymap
       <axis limit="-1" id="1">Left</axis>
       <axis limit="-1" id="2">Up</axis>
       <axis limit="+1" id="2">Down</axis>
-      <button id="#X#">Pause</button>
-      <button id="#circle#">Stop</button>
-      <button id="#L2#">Rotate</button>
-      <button id="#R2#">Rotate</button>
-      <button id="#square#">ZoomNormal</button>
-      <button id="#start#">CodecInfo</button>
-      <button id="#select#">Info</button>
+      <button id="#A#">Pause</button>
+      <button id="#B#">Stop</button>
+      <button id="#WHITE#">Rotate</button>
+      <button id="#BLACK#">Rotate</button>
+      <button id="#X#">ZoomNormal</button>
+      <button id="#START#">CodecInfo</button>
+      <button id="#BACK#">Info</button>
       <button id="#R1#">NextPicture</button>
       <button id="#L1#">PreviousPicture</button>
       <#d-pad_left#>PreviousPicture</#d-pad_closing_tag#>
       <#d-pad_right#>NextPicture</#d-pad_closing_tag#>
       <#d-pad_up#>ZoomIn</#d-pad_closing_tag#>
       <#d-pad_down#>ZoomOut</#d-pad_closing_tag#>
-      <button id="#triangle#">XBMC.ActivateWindow(PlayerControls)</button>
+      <button id="#Y#">XBMC.ActivateWindow(PlayerControls)</button>
     </joystick>
   </SlideShow>
 
@@ -288,10 +280,10 @@ http://wiki.xbmc.org/index.php?title=keymap
       <axis limit="-1" id="1">Left</axis>
       <axis limit="-1" id="2">Up</axis>
       <axis limit="+1" id="2">Down</axis>
-      <button id="#X#">NextCalibration</button>
+      <button id="#A#">NextCalibration</button>
       <button id="#R1#">ResetCalibration</button>
-      <button id="#R2#">NextResolution</button>
-      <button id="#circle#">PreviousMenu</button>
+      <button id="#BLACK#">NextResolution</button>
+      <button id="#B#">PreviousMenu</button>
     </joystick>
   </ScreenCalibration>
 
@@ -301,73 +293,73 @@ http://wiki.xbmc.org/index.php?title=keymap
       <axis limit="-1" id="1">Left</axis>
       <axis limit="-1" id="2">Up</axis>
       <axis limit="+1" id="2">Down</axis>
-      <button id="#X#">NextCalibration</button>
+      <button id="#A#">NextCalibration</button>
       <button id="#R1#">ResetCalibration</button>
-      <button id="#circle#">PreviousMenu</button>
+      <button id="#B#">PreviousMenu</button>
     </joystick>
   </GUICalibration>
 
   <SelectDialog>
     <joystick name="#joystick_name#">
-      <button id="#circle#">Close</button>
+      <button id="#B#">Close</button>
     </joystick>
   </SelectDialog>
 
   <VideoOSD>
     <joystick name="#joystick_name#">
-      <button id="#triangle#">Close</button>
-      <button id="#circle#">PreviousMenu</button>
+      <button id="#Y#">Close</button>
+      <button id="#B#">PreviousMenu</button>
       <button id="#R1#">CodecInfo</button>
       <button id="#L1#">Info</button>
-      <button id="#L2#">AnalogRewind</button>
-      <button id="#R2#">AnalogFastForward</button>
+      <button id="#WHITE#">AnalogRewind</button>
+      <button id="#BLACK#">AnalogFastForward</button>
     </joystick>
   </VideoOSD>
 
   <VideoMenu>
     <joystick name="#joystick_name#">
-      <button id="#square#">AspectRatio</button>
-      <button id="#circle#">Stop</button>
-      <button id="#triangle#">OSD</button>
-      <button id="#select#">Info</button>
+      <button id="#X#">AspectRatio</button>
+      <button id="#B#">Stop</button>
+      <button id="#Y#">OSD</button>
+      <button id="#BACK#">Info</button>
       <button id="#R1#">CodecInfo</button>
-      <button id="#L2#">AnalogRewind</button>
-      <button id="#R2#">AnalogFastForward</button>
+      <button id="#WHITE#">AnalogRewind</button>
+      <button id="#BLACK#">AnalogFastForward</button>
     </joystick>
   </VideoMenu>
 
   <OSDVideoSettings>
     <joystick name="#joystick_name#">
-      <button id="#square#">AspectRatio</button>
-      <button id="#circle#">Close</button>
-      <button id="#triangle#">Close</button>
-      <button id="#start#">Close</button>
+      <button id="#X#">AspectRatio</button>
+      <button id="#B#">Close</button>
+      <button id="#Y#">Close</button>
+      <button id="#START#">Close</button>
       <button id="#R1#">CodecInfo</button>
-      <button id="#select#">Info</button>
-      <button id="#L2#">AnalogRewind</button>
-      <button id="#R2#">AnalogFastForward</button>
+      <button id="#BACK#">Info</button>
+      <button id="#WHITE#">AnalogRewind</button>
+      <button id="#BLACK#">AnalogFastForward</button>
     </joystick>
   </OSDVideoSettings>
 
   <OSDAudioSettings>
     <joystick name="#joystick_name#">
-      <button id="#square#">AspectRatio</button>
-      <button id="#circle#">Close</button>
-      <button id="#triangle#">Close</button>
+      <button id="#X#">AspectRatio</button>
+      <button id="#B#">Close</button>
+      <button id="#Y#">Close</button>
       <button id="#R1#">CodecInfo</button>
-      <button id="#select#">Info</button>
-      <button id="#L2#">AnalogRewind</button>
-      <button id="#R2#">AnalogFastForward</button>
+      <button id="#BACK#">Info</button>
+      <button id="#WHITE#">AnalogRewind</button>
+      <button id="#BLACK#">AnalogFastForward</button>
     </joystick>
   </OSDAudioSettings>
 
   <VideoBookmarks>
     <joystick name="#joystick_name#">
       <button id="#R1#">Delete</button>
-      <button id="#circle#">Close</button>
-      <button id="#triangle#">Close</button>
-      <button id="#L2#">AnalogRewind</button>
-      <button id="#R2#">AnalogFastForward</button>
+      <button id="#B#">Close</button>
+      <button id="#Y#">Close</button>
+      <button id="#WHITE#">AnalogRewind</button>
+      <button id="#BLACK#">AnalogFastForward</button>
     </joystick>
   </VideoBookmarks>
 
@@ -389,26 +381,26 @@ http://wiki.xbmc.org/index.php?title=keymap
     <joystick name="#joystick_name#">
       <button id="#L1#">PreviousMenu</button>
       <button id="#R1#">Delete</button>
-      <button id="#circle#">Playlist</button>
+      <button id="#B#">Playlist</button>
     </joystick>
   </MyVideoPlaylist>
 
   <VirtualKeyboard>
     <joystick name="#joystick_name#">
-      <button id="#start#">Enter</button>
-      <button id="#square#">BackSpace</button>
-      <button id="#R2#">Shift</button>
-      <button id="#L2#">Symbols</button>
+      <button id="#START#">Enter</button>
+      <button id="#X#">BackSpace</button>
+      <button id="#BLACK#">Shift</button>
+      <button id="#WHITE#">Symbols</button>
       <button id="#L1#">CursorLeft</button>
-      <button id="#circle#">Close</button>
+      <button id="#B#">Close</button>
       <button id="#R1#">CursorRight</button>
     </joystick>
   </VirtualKeyboard>
 
   <ContextMenu>
     <joystick name="#joystick_name#">
-      <button id="#circle#">Close</button>
-      <button id="#triangle#">Close</button>
+      <button id="#B#">Close</button>
+      <button id="#Y#">Close</button>
     </joystick>
   </ContextMenu>
 
@@ -420,37 +412,37 @@ http://wiki.xbmc.org/index.php?title=keymap
 
   <NumericInput>
     <joystick name="#joystick_name#">
-      <button id="#circle#">BackSpace</button>
-      <button id="#start#">Enter</button>
-      <button id="#L2#">SkipPrevious</button>
-      <button id="#R2#">SkipNext</button>
+      <button id="#B#">BackSpace</button>
+      <button id="#START#">Enter</button>
+      <button id="#WHITE#">SkipPrevious</button>
+      <button id="#BLACK#">SkipNext</button>
     </joystick>
   </NumericInput>
 
   <GamepadInput>
     <joystick name="#joystick_name#">
-      <button id="#start#">Stop</button>      <!-- Enter Password -->
+      <button id="#START#">Stop</button>      <!-- Enter Password -->
     </joystick>
   </GamepadInput>
 
   <MusicInformation>
     <joystick name="#joystick_name#">
-      <button id="#select#">Close</button>
-      <button id="#circle#">Close</button>
+      <button id="#BACK#">Close</button>
+      <button id="#B#">Close</button>
     </joystick>
   </MusicInformation>
 
   <SongInformation>
     <joystick name="#joystick_name#">
-      <button id="#select#">Close</button>
-      <button id="#circle#">Close</button>
+      <button id="#BACK#">Close</button>
+      <button id="#B#">Close</button>
     </joystick>
   </SongInformation>
 
   <MovieInformation>
     <joystick name="#joystick_name#">
-      <button id="#select#">Close</button>
-      <button id="#circle#">Close</button>
+      <button id="#BACK#">Close</button>
+      <button id="#B#">Close</button>
     </joystick>
   </MovieInformation>
 
@@ -462,7 +454,7 @@ http://wiki.xbmc.org/index.php?title=keymap
 
   <ProfileSettings>
     <joystick name="#joystick_name#">
-      <button id="#start#">Close</button>
+      <button id="#START#">Close</button>
     </joystick>
   </ProfileSettings>
 
@@ -470,8 +462,8 @@ http://wiki.xbmc.org/index.php?title=keymap
     <joystick name="#joystick_name#">
       <#d-pad_left#>PreviousPicture</#d-pad_closing_tag#>
       <#d-pad_right#>NextPicture</#d-pad_closing_tag#>
-      <button id="#circle#">Close</button>
-      <button id="#select#">Close</button>
+      <button id="#B#">Close</button>
+      <button id="#BACK#">Close</button>
     </joystick>
   </PictureInfo>
 
